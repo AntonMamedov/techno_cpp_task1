@@ -7,7 +7,7 @@ TEST(FilterTest, NormlFIlterTest){
     vector test_src;
     vec_init(&test_src);
     char* pattern = "\"111\"";
-    char* src1 = "src = \"111\"";
+    char* src1 = "<img src = \"111\">";
     char* src2 = "src 111";
     vec_push(src1,&test_src);
     vec_push(src2,&test_src);
@@ -24,8 +24,8 @@ TEST(FilterTest, LowHighPaperTest){
     vector test_src;
     vec_init(&test_src);
     char* pattern = "\"111\"";
-    char* src1 = "src = \"111\"";
-    char* src2 = "SRC = \"111\"";
+    char* src1 = "<img src = \"111\">";
+    char* src2 = "<IMG SRC = \"111\">";
     vec_push(src1,&test_src);
     vec_push(src2,&test_src);
     vector test_result;
