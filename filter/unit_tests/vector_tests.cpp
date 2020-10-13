@@ -26,6 +26,7 @@ TEST(VectorPushTest, NormalPushTest){
     ASSERT_EQ(DEFAULT_VECTOR_SIZE, test.alloc_size);
     ASSERT_STREQ(test.vector[0], src1);
     ASSERT_STREQ(test.vector[1], src2);
+    free(test.vector);
 }
 
 TEST(VectorPushTest, ExtendPushTest){
